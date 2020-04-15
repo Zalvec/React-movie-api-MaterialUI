@@ -1,0 +1,42 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.title {
+  padding: 0.8em 0;
+}
+
+/*Nav & Links*/
+.movieLink,
+.link {
+  text-decoration: none;
+  color: #3f51b5;
+}
+
+.active,
+.movieLink:hover,
+.link:hover {
+  font-weight: bold;
+}
+
+/* Form */
+.submitButton {
+  margin-left: 10px !important;
+}
+
+/* Movie Info */
+.movieInfoPaper {
+  padding: 0.5em 1em;
+  margin-top: 1em;
+}
+
+.movieTitle {
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  top: auto !important;
+  bottom: 0;
+}
