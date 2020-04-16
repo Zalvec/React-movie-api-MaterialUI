@@ -7,7 +7,7 @@ import {
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-export default ({ plot }) => (
+export default ({ plot, type }) => (
   <>
     <ExpansionPanel style={{ margin: "1em 0" }}>
       <ExpansionPanelSummary
@@ -20,7 +20,8 @@ export default ({ plot }) => (
       </ExpansionPanelSummary>
       <ExpansionPanelDetails>
         <Typography variant="subtitle1" align="justify">
-          {plot}
+          {plot !== "N/A" && plot}
+          {plot === "N/A" && `The plot of this ${type} is a mystery..`}
         </Typography>
       </ExpansionPanelDetails>
     </ExpansionPanel>

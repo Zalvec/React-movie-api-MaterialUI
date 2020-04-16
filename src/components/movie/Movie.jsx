@@ -73,7 +73,7 @@ export default class App extends React.Component {
                   </Typography>
                   <MovieDetail detail={this.state.movie.data} />
                   {this.state.movie.data.Plot && (
-                    <MoviePlot plot={this.state.movie.data.Plot} />
+                    <MoviePlot plot={this.state.movie.data.Plot} type={this.state.movie.data.Type}/>
                   )}
                 </>
               )}
