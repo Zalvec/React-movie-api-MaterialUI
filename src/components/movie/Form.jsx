@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { TextField, Button } from "@material-ui/core";
+import SearchIcon from '@material-ui/icons/Search';
 
 export default class Form extends Component {
   constructor(props) {
@@ -72,6 +73,7 @@ export default class Form extends Component {
           color="primary"
           variant="contained"
           className="submitButton"
+          startIcon={<SearchIcon />}
         >
           Find it!
         </Button>

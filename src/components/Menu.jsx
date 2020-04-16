@@ -7,7 +7,8 @@ import {
   Toolbar,
   IconButton,
   Typography,
-  Backdrop
+  Backdrop,
+  makeStyles
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 
@@ -32,10 +33,20 @@ export default props => {
     setOpen(!open);
   };
 
+  /*Flex Header*/
+  const useStyles = makeStyles( () => ({
+    headerStyles : {
+      flex: 1
+    }
+  }))
+
+  const classes = useStyles()
+
   return (
     <>
       <AppBar position="fixed">
         <Toolbar>
+          <Typography className={classes.headerStyles}>Material UI Movie App</Typography>
           <IconButton
             aria-controls="simple-menu"
             aria-haspopup="true"
@@ -43,7 +54,6 @@ export default props => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography>Material UI Movie App</Typography>
         </Toolbar>
       </AppBar>
       <Backdrop open={open} onClick={handleBackdropClose}>
